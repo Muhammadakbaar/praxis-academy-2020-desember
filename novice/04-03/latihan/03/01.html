@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Build a table</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+</head>
+<body>
+        <h1 class="title is-size-1">Mountains</h1>
+
+        <div id="mountains"></div>
+        
+        <script>
+          const MOUNTAINS = [
+            {name: "Kilimanjaro", height: 5895, place: "Tanzania"},
+            {name: "Everest", height: 8848, place: "Nepal"},
+            {name: "Mount Fuji", height: 3776, place: "Japan"},
+            {name: "Vaalserberg", height: 323, place: "Netherlands"},
+            {name: "Denali", height: 6168, place: "United States"},
+            {name: "Popocatepetl", height: 5465, place: "Mexico"},
+            {name: "Mont Blanc", height: 4808, place: "Italy/France"}
+          ];
+          function tableCreate() { 
+          var mtDiv = document.getElementById("mountains");
+          mtDiv.className = "table";
+          var table = document.createElement('table');
+        
+            // cycle through the array for each of the presidents
+            for (var i = 0; i < MOUNTAINS.length; ++i)
+            {   // keep a reference to an individual president object
+                var mountain = MOUNTAINS[i];
+        
+                // create a row element to append cells to
+                var row = document.createElement('tr');
+        
+                // properties of the array elements
+                var properties = Object.keys(MOUNTAINS[0]);
+        
+                // append each one of them to the row in question, in order
+                for (var j = 0; j < properties.length; ++j)
+                {   
+                      // create new data cell for names
+                    var cell = document.createElement('td');
+                    
+                      if (i == 0) {
+                        var head = document.createElement('th');
+                        head.innerHTML = properties[j];
+                        row.appendChild(head)
+                    
+                       } else if (j == 1) {
+                          // set name of property using bracket notation (properties[i] is a string,
+                        // which can be used to access properties of president)
+                        cell.innerHTML = mountain[properties[j]];
+                          cell.style.textAlign = 'right';
+                          cell.className = "has-background-light"
+                        // add to end of the row
+                          row.appendChild(cell);
+                    } else {
+                        // set name of property using bracket notation (properties[i] is a string,
+                        // which can be used to access properties of president)
+                        cell.innerHTML = mountain[properties[j]];
+                        // add to end of the row
+                        row.appendChild(cell);
+                    }
+                }
+                // add new row to table
+                table.appendChild(row);
+                mtDiv.appendChild(table);
+            }
+          }
+          tableCreate();
+        </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: coba
+---
+testFramework: junit
+sourceLanguage: java

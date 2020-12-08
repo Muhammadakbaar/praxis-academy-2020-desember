@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MVCPatternDemo",
+            "request": "launch",
+            "mainClass": "latihan.mvc.MVCPatternDemo",
+            "projectName": "latihan"
+        }
+    ]
+}

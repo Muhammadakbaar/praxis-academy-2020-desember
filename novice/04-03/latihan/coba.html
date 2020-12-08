@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        const MOUNTAINS = [
+    {name: "Kilimanjaro", height: 5895, place: "Tanzania"},
+    {name: "Everest", height: 8848, place: "Nepal"},
+    {name: "Mount Fuji", height: 3776, place: "Japan"},
+    {name: "Vaalserberg", height: 323, place: "Netherlands"},
+    {name: "Denali", height: 6168, place: "United States"},
+    {name: "Popocatepetl", height: 5465, place: "Mexico"},
+    {name: "Mont Blanc", height: 4808, place: "Italy/France"}
+  ];
+
+  function tableCreate(){
+    var div = document.querySelector("#mountains");
+        tbl  = document.createElement('table');
+    tbl.style.width  = '100px';
+    tbl.style.border = '1px solid black';
+
+    for(var row = 0; row < MOUNTAINS.length; row++){
+        var th = tbl.insertHead();
+        var tr = tbl.insertRow();
+        for(var col = 0; col < 3; col++){
+          var td = tr.insertCell();	
+          if((row == 0)&&(col == 0)) {
+          	td.appendChild(document.createTextNode(Object.keys(MOUNTAINS[0]))); 
+          	break;
+          }
+          
+			
+            td.appendChild(document.createTextNode(Object.values(MOUNTAINS[row])));
+            td.style.border = '1px solid black';
+            
+        }
+    }
+    div.appendChild(tbl);
+}
+tableCreate();
+
+var cell = document.createElement('td');
+
+    </script>
+</body>
+</html>

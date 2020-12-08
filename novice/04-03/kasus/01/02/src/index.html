@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shopping list example</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+        <h1 class="title">My shopping list</h1>
+    
+        <div class="columns">
+            <div class="column is-two-third">
+                
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th><label class="label" for="item">Enter a new item:</label>
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td><input class="input"type="text" name="item" id="item" required="required">
+                            </td>
+                            <td><button class="button is-primary">Add item</button></td>
+                    </tr>
+                </table>
+                
+                
+            
+            </div>
+            
+        </div>
+        <div class="columns">
+                <div class="column">
+                    
+                    <table id="shoppingList" class="table is-striped is-hidden">
+                        <thead>
+                            <th><strong>List of items:</strong></th>
+                            <th></th>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

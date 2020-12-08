@@ -1,0 +1,48 @@
+<perpustakaan>
+	<books id = "1">
+		<judul>Belajar Java</judul>
+		<pengarang>Praxis academy</pengarang>
+	</books>
+	<books id = "2">
+		<judul>Belajar python</judul>
+		<pengarang>Praxis academy</pengarang>
+	</books>
+	<books id = "3">
+		<judul>Belajar masak</judul>
+		<pengarang>Gordon Ramsey</pengarang>
+	</books>
+	<anggota id = "1">
+		<nama>Lazuardi Akbar</nama>
+		<alamat>Balapulang</alamat>
+	</anggota>
+	<anggota id = "2">
+		<nama>Orang ke-2</nama>
+		<alamat>Bumi</alamat>
+	</anggota>
+	<staff id = "123">
+		<nama>Bamnomo</nama>
+		<alamat>Jupiter</alamat>
+	</staff>
+	<staff id = "222">
+		<nama>Vladimir Putin</nama>
+		<alamat>Russia</alamat>
+	</staff>
+	<staff id = "333">
+		<nama>Natasha Romanoff</nama>
+		<alamat>Rahasia</alamat>
+	</staff>
+	<peminjaman id = "1">
+		<id_anggota>1</id_anggota>
+		<id_buku>1</id_buku>
+		<tanggal_pinjam>30-01-2019</tanggal_pinjam>
+		<tanggal_kembali>05-02-2019</tanggal_kembali>
+		<sudah_kembali>sudah</sudah_kembali>
+	</peminjaman>
+	<peminjaman id = "2">
+		<id_anggota>2</id_anggota>
+		<id_buku>3</id_buku>
+		<tanggal_pinjam>12-02-2019</tanggal_pinjam>
+		<tanggal_kembali>15-02-2019</tanggal_kembali>
+		<sudah_kembali>belum</sudah_kembali>
+	</peminjaman>
+</perpustakaan>

@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: buku
+---
+testFramework: junit
+sourceLanguage: java

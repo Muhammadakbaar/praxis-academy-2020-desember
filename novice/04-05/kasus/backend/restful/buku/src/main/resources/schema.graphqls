@@ -1,0 +1,16 @@
+type Link {
+  url: String!
+  description: String!
+}
+type Query {
+    # a type of query wich return all links
+    # hello(name: String): String!
+    allLinks: [Link]
+}
+type Mutation {
+    createLink(url: String!, description: String!): Link
+}
+schema {
+    query: Query,
+    mutation: Mutation
+}

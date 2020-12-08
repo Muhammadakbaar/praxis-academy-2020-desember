@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2. querySelectorAll()</title>
+</head>
+<body>
+    <p>paragraph one</p>
+    <p>paragraph two</p>
+    <div>div one</div>
+    <p>paragraph three</p>
+    <div>div two</div>
+    <script>
+        var paragraphs = document.querySelectorAll('p');
+        for(var p of paragraphs)
+        p.style.color = 'blue';
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>11. createDocumentFragment()</title>
+</head>
+<body>
+    <table></table>
+    <script>
+        var table = document.querySelector("table");
+        var df = document.createDocumentFragment();
+        
+        for(var i=0; i<5; i++) {
+        var td = document.createElement("td");
+        var tr = document.createElement("tr");
+        td.textContent = i;
+        tr.appendChild(td)
+        df.appendChild(tr);
+        }
+        
+        table.appendChild(df);
+    </script>
+</body>
+</html>

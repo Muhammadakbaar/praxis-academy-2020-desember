@@ -1,0 +1,17 @@
+{
+  "name": "kasus",
+  "version": "1.0.0",
+  "description": "kasus 04-01",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"start": "node src/ramda.js"
+  },
+  "author": "akbarlaz",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "ramda": "^0.26.1",
+    "underscore": "^1.9.1"
+  }
+}

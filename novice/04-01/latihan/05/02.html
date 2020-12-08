@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        
+        // Initializing a class definition
+        class Hero {
+            constructor(name, level) {
+                this.name = name;
+                this.level = level;
+            }
+            // Adding a method to the constructor
+            greet() {
+                return `${this.name} says hello.`;
+            }
+
+            // Creating a new constructor from the parent
+        
+
+        }
+
+        const hero1 = new Hero ('Varg', 1);
+        console.log(hero1);
+
+        // Creating a new class from the parent
+        class Mage extends Hero {
+            constructor(name, level, spell) {
+                // Chain constructor with super
+                super(name, level);
+
+                // Add a new property
+                this.spell = spell;
+            }
+        }
+
+        const hero2 = new Mage ('Lejon', 2, 'Magic Missile');
+        console.log(hero2);
+
+        document.write("<table>");
+        document.write("<th> Class </th>");
+        document.write("<th> Name </th>");
+        document.write("<th> Level </th>");
+        document.write("<th> Spell </th>");
+        document.write("<tbody>");
+        document.write("<tr>")
+        document.write("<td>"+hero1.constructor.name+"</td>")
+        document.write("<td>"+hero1.name+"</td>");
+        document.write("<td>"+hero1.level+"</td>");
+        document.write("</tr>")
+        document.write("<tr>");
+            document.write("<td>"+hero2.constructor.name+"</td>")
+            document.write("<td>"+hero2.name+"</td>");
+            document.write("<td>"+hero2.level+"</td>");
+            document.write("<td>"+hero2.spell+"</td>");
+        document.write("</tr>");
+        document.write("</tbody>");
+        document.write("</table>");
+
+    </script>
+</body>
+</html>
+
